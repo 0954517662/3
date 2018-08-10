@@ -882,14 +882,14 @@ def lineBot(op):
                         grouplist = line.getGroupIdsJoined()
                         contactlist = line.getAllContactIds()
                         blockedlist = line.getBlockedContactIds()
-                        ret_ = "╔══[BY.มินทีมทดลองบอท]"
+                        ret_ = "╔【さัএπัஞ✵ບิथℓℓҨतΩ】"
                         ret_ += "\n╠۝ ชื่อ ═ {}".format(contact.displayName)
                         ret_ += "\n╠۝ กลุ่ม ═ {}".format(str(len(grouplist)))
                         ret_ += "\n╠۝ เพื่อน ═ {}".format(str(len(contactlist)))
                         ret_ += "\n╠۝ บล็อค ═ {}".format(str(len(blockedlist)))
                         ret_ += "\n╠══[สถานะ] ═ {}".format(contact.statusMessage)
                         ret_ += "\n╠۝ ผู้สร้าง ═ {}".format(creator.displayName)
-                        ret_ += "\n╚══[BY.มินทีมทดลองบอท]"
+                        ret_ += "\n╚【さัএπัஞ✵ບิथℓℓҨतΩ】"
                         line.sendContact(to, owner)
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
@@ -948,7 +948,7 @@ def lineBot(op):
                         else: ret_ += "\n╠ ป้องกันสมาชิก ✘ "
                         if RfuProtect["Protectjoin"] == True: ret_ += "\n╠ ป้องกันเข้ากลุ่ม ✔"
                         else: ret_ += "\n╠ ป้องกันเข้ากลุ่ม ✘ "						
-                        ret_ += "\n[BY.มินทีมทดลองบอท]"
+                        ret_ += "\n[【さัএπัஞ✵ບิथℓℓҨतΩ】]"
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
                         line.sendMessage(msg.to, str(e))
@@ -1037,7 +1037,7 @@ def lineBot(op):
                     line.sendContact(to, lineMID)
                 elif text.lower() == '.ผส':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "ufad8bc98e4811b51115039219b8f8faf")
+                    line.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
                 elif text.lower() == '.ไอดี':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == '.ชื่อ':
@@ -1075,7 +1075,7 @@ def lineBot(op):
                         if g.displayName in "":
                             targets.append(g.mid)
                     if targets == []:
-                        line.sendMessage(to, "ม่มีคนใส่ร่องหนในกลุ่มนี้😂")
+                        line.sendMessage(to, "ไม่มีคนใส่ร่องหนในกลุ่มนี้ 😈")
                     else:
                         mc = ""
                         for target in targets:
@@ -1088,7 +1088,7 @@ def lineBot(op):
                         if g.displayName in "":
                             lists.append(g.mid)
                     if lists == []:
-                        line.sendMessage(to, "ไม่มีmidคนใส่ร่องหน🤗")
+                        line.sendMessage(to, "ไม่มีmidคนใส่ร่องหน 😈")
                     else:
                         mc = ""
                         for mi_d in lists:
@@ -1101,7 +1101,7 @@ def lineBot(op):
                         if g.displayName in "":
                             lists.append(g.mid)
                     if lists == []:
-                        line.sendMessage(to, "ไม่มีคนใส่ร่องหนในกลุ่มนี้😂")
+                        line.sendMessage(to, "ไม่มีคนใส่ร่องหนในกลุ่มนี้ 😈")
                     else:
                         for ls in lists:
                             contact = line.getContact(ls)
@@ -1414,7 +1414,7 @@ def lineBot(op):
                     ret_ += "\n╠ จำนวนสมาชิก : {}".format(str(len(group.members)))
                     ret_ += "\n╠ จำนวนค้างเชิญ : {}".format(gPending)
                     ret_ += "\n╠ ลิ้งของกลุ่ม : {}".format(gQr)
-                    ret_ += "\n╠ ลิ้งกลุ่ม👉 : {}".format(gTicket)
+                    ret_ += "\n╠ ลิ้งกลุ่ม : {}".format(gTicket)
                     ret_ += "\n╚══[ Finish ]"
                     line.sendMessage(to, str(ret_))
                     line.sendImageWithURL(to, path)
@@ -1438,7 +1438,7 @@ def lineBot(op):
                             no += 1
                         ret_ += "\n╚══[ จำนวน {} Groups ]".format(str(len(groups)))
                         line.sendMessage(to, str(ret_))				
-                elif ".เชิญคลอ" == msg.text.lower():
+                elif ".เชิญคอล" == msg.text.lower():
                     line.inviteIntoGroupCall(msg.to,[uid.mid for uid in line.getGroup(msg.to).members if uid.mid != line.getProfile().mid])
                     line.sendMessage(msg.to,"เชิญเข้าร่วมการโทรสำเร็จ(｀・ω・´)")
                 elif ".sh " in msg.text.lower():
@@ -1512,30 +1512,30 @@ def lineBot(op):
                                thisgroup = line.getGroups([msg.to])
                                Mids = [target for contact in thisgroup[0].members]
                                mi_d = Mids[:33]
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("[BY.มินทีมทดลองบอท]",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                               line.createGroup("【さัএπัஞ✵ບิथℓℓҨतΩ】",mi_d)
+                               line.sendText(msg.to,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
                                line.sendText(msg.to,"เรียบร้อย")
                             except:
                                 pass
@@ -1546,51 +1546,51 @@ def lineBot(op):
                     gs = line.getGroup(msg.to)
                     for g in gs.members:
                         if _nametarget == g.displayName:
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
-                           line.sendText(g.mid,"นายมิน")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
+                           line.sendText(g.mid,"【さัএπัஞ✵ບิथℓℓҨतΩ】")
                            line.sendText(msg.to, "Done")
                            print (" Spammed !")
                 elif ".สำรองห้อง" in msg.text:
@@ -1721,12 +1721,12 @@ def lineBot(op):
                 elif text.lower() == '.แจ๊ะ':
                     group = line.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members]
-                    k = len(nama)//100
+                    k = len(nama)//20
                     for a in range(k+1):
                         txt = ''
                         s=0
                         b=[]
-                        for i in group.members[a*100 : (a+1)*100]:
+                        for i in group.members[a*20 : (a+1)*20]:
                             b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                             s += 7
                             txt += '@Alin \n'
@@ -3620,7 +3620,7 @@ def lineBot(op):
                                          line.sendMessage(receiver,"Group cleanse")
                                          print ("Cleanse Group")
 
-                elif msg.text in [".ไล่ดำ"]:
+                elif msg.text in [".ตำรวจมา"]:
                 	if msg.toType == 2:
                          group = line.getGroup(receiver)
                          gMembMids = [contact.mid for contact in group.members]
@@ -4320,7 +4320,7 @@ def lineBot(op):
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendText(msg.to,"ตรวจพบคำพูดหยาบคายไม่สุภาพ จำเป็นต้องนำออกเพื่อความสงบสุขของสมาชิก (｀・ω・´)")
             if settings ["Api"] == True:
-            	if msg.text in ["พี่มิน","ป๊ามิน","ลุง","มิน","นาย","เพื่อน","จาร์ย","อาจาร์ย","เฮีย"]:
+            	if msg.text in ["แม็คหล่อ","แม็ครวย","ลุง","หรรม","นาย","เพื่อน","จาร์ย","อาจาร์ย","เฮีย"]:
                     line.sendMessage(msg.to, str(settings["comment"]))
             if settings ["Api"] == True:
                 if msg.text in ["บอท","เซล","เซลบอท","selfbot","คนรึบอท","Help","help",".help","/help","คำสั่ง"]:
@@ -4600,7 +4600,7 @@ def lineBot(op):
             except:
                 pass
         if op.type == 55:
-            print ("[BY MIN HACK BOT]")
+            print ("【さัএπัஞ✵ບิथℓℓҨतΩ】")
             try:
                 if op.param1 in read['readPoint']:
                     if op.param2 in read['readMember'][op.param1]:
